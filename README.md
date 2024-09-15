@@ -1,2 +1,2 @@
 # face-detection-system
-i developed using java awt,sql.
+i developed using java swing ,sql.
