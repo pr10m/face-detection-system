@@ -12,61 +12,61 @@ public class Operator extends JFrame implements ActionListener {
         // Check if running in headless environment
         if (GraphicsEnvironment.isHeadless()) {
             System.err.println("Headless environment detected, GUI cannot be created.");
-            return; // Exit constructor to avoid creating GUI components
+            return;
         }
 
         c1 = getContentPane();
         c1.setLayout(new FlowLayout());
-        
-        setBackground(Color.LIGHT_GRAY);
+        c1.setBackground(Color.LIGHT_GRAY);  // Corrected line to set the background
+
         f = new Font("Arial", Font.BOLD, 20);
-        
-        ImageIcon i = new ImageIcon("criminal1.jpg");
-        
+
+        ImageIcon i = new ImageIcon("criminal1.jpg"); // Ensure this image path is correct
+
         l = new JLabel("Welcome, Chandu!!!!!!!!", JLabel.CENTER);
         l2 = new JLabel("Hi,", i, JLabel.LEADING);
         l3 = new JLabel("This is Operator", JLabel.CENTER);
-        
+
         b3 = new JButton("Identifying Images");
         b4 = new JButton("Images from Database");
         b8 = new JButton("Drawing of Images");
-        
+
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
         });
-        
+
         l.setForeground(new Color(100, 100, 100));
         l.setFont(new Font("Arial", Font.BOLD, 30));
         l2.setForeground(new Color(100, 100, 100));
         l2.setFont(new Font("Arial", Font.BOLD, 20));
         l3.setForeground(new Color(0, 64, 64));
         l3.setFont(new Font("Arial", Font.BOLD, 20));
-        
+
         b3.setForeground(Color.WHITE);
         b3.setBackground(new Color(0, 64, 64));
         b3.setFont(new Font("Arial", Font.BOLD, 15));
-        
+
         b4.setForeground(Color.WHITE);
         b4.setBackground(new Color(0, 64, 64));
         b4.setFont(new Font("Arial", Font.BOLD, 15));
-        
+
         b8.setForeground(Color.WHITE);
         b8.setBackground(new Color(0, 64, 64));
         b8.setFont(new Font("Arial", Font.BOLD, 15));
-        
+
         b3.addActionListener(this);
         b4.addActionListener(this);
         b8.addActionListener(this);
-        
+
         c1.add(l);
         c1.add(l2);
         c1.add(l3);
         c1.add(b4);
         c1.add(b3);
         c1.add(b8);
-        
+
         setSize(500, 600);
         setVisible(true);
     }
@@ -121,16 +121,8 @@ class Draw extends JFrame {
     }
 }
 
-	
-        
+       
 
 
-
-
-
-
-
-
-
-
-
+      
+       
